@@ -1,0 +1,352 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8faff;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0.7rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #2166e6;
+}
+
+.logo-icon {
+  font-size: 1.6rem;
+  margin-right: 0.5rem;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.navbar-menu a.active,
+.navbar-menu a:hover {
+  color: #2166e6;
+  border-bottom: 2px solid #2166e6;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 0.7rem;
+}
+.btn-white-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.5rem 1.3rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin: 0 0.5rem;
+}
+
+.btn-white-outline:hover,
+.btn-white-outline:focus {
+  background: #fff;
+  color: #2563eb; /* Use your primary blue */
+  border-color: #fff;
+}
+
+
+.btn-primary, .btn-outline {
+  padding: 0.5rem 1.1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.btn-primary {
+  background: #2166e6;
+  color: #fff;
+  border: 1px solid #2166e6;
+}
+
+.btn-primary:hover {
+  background: #174bb3;
+  border-color: #174bb3;
+}
+
+.btn-outline {
+  background: #fff;
+  color: #2166e6;
+  border: 1px solid #2166e6;
+}
+
+.btn-outline:hover {
+  background: #e6f0ff;
+}
+
+.btn-outline.wide {
+  width: 220px;
+  margin: 2rem auto 0 auto;
+  display: block;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fb;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px; 
+}
+
+.brand {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: 0.5px;
+    margin-left: -6px; 
+}
+
+
+
+.form-box {
+    background: #fff;
+    padding: 20px 50px 20px 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.10), 0 1.5px 8px rgba(0,0,0,0.04);
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h2 {
+    margin: 8px 0 4px 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.subtitle {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 0.98rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+    color: #222;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f5f7fa;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+small {
+    color: #888;
+    font-size: 0.92rem;
+    margin-top: -8px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #1742a2;
+}
+
+.signin-link {
+    margin-top: 18px;
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
+}
+
+.signin-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+/* Input group with icon for Sign In/Sign Up */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bfc6d1;
+    font-size: 1.15rem;
+    pointer-events: none;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 12px 10px 38px; 
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f5f7fa;
+    transition: border-color 0.2s;
+    height: 42px;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #2563eb;
+    outline: none;
+    background: #fff;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.label-row label {
+    margin: 0;
+}
+
+.forgot-link {
+    font-size: 0.98rem;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+
+.divider {
+    border: none;
+    border-top: 1px solid #ececec;
+    margin: 24px 0 16px 0;
+    width: 100%;
+}
+
+
+.demo-info {
+    color: #5e6e8c;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.demo-info .demo-email,
+.demo-info .demo-password {
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    color: #2563eb;
+}
+
+
+.signup-link {
+    margin-top: 18px;
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 500px) {
+    .form-box, .logo {
+        width: 98vw;
+        padding: 24px 6vw;
+    }
+}

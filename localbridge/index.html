@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>LocalBridge</title>
+  <link rel="stylesheet" href="style.css">
+ 
+
+</head>
+
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-left">
+     <img src="logo.png" alt="LocalBridge Logo">
+      <span class="logo-text">LocalBridge</span>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="issues.html">Issues</a></li>
+      <li><a href="reportIssue.php">Report Issue</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="navbar-right">
+      <a href="signin.php"><button class="btn-outline">Sign in</button></a>
+       <a href="signup.php"><button class="btn-primary">Sign up</button></a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Report and resolve local issues<br>together</h1>
+    <p>LocalBridge connects residents with local authorities to report, track, and resolve community issues.</p>
+   <div class="hero-actions">
+  <!-- <a href="report_issue.html"><button class="btn-white-outline">Report an Issue</button></a>
+  <a href="issues.html"><button class="btn-white-outline">View Issues</button></a> -->
+</div>
+
+
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <p>LocalBridge makes it easy to report issues in your community and track their resolution</p>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon"><span class="icon-bg">🔍</span></div>
+        <h3>Report an Issue</h3>
+        <p>Submit details about local problems such as potholes, broken streetlights, or garbage overflow.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><span class="icon-bg">👁️</span></div>
+        <h3>Track Progress</h3>
+        <p>Follow the status of your reports and get updates as issues are addressed by authorities.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><span class="icon-bg">👥</span></div>
+        <h3>Community Engagement</h3>
+        <p>Upvote important issues, add comments, and collaborate with neighbors to improve your area.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose LocalBridge -->
+<section class="why-choose">
+  <div class="why-img">
+   <img src="uploads/whychooseus.jpg" alt="Community Meeting">
+
+  </div>
+  <div class="why-content">
+    <h2>Why Choose LocalBridge?</h2>
+    <ul>
+      <li>
+        <span class="why-icon">🔍</span>
+        <div>
+          <strong>Real-time Updates</strong>
+          <p>Stay informed about the status of reported issues with immediate notifications.</p>
+        </div>
+      </li>
+      <li>
+        <span class="why-icon">👥</span>
+        <div>
+          <strong>Community-Powered</strong>
+          <p>Collaborate with neighbors to highlight and address local concerns together.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+  <!-- Success Stories -->
+  <section class="success-stories">
+    <h2>Success Stories</h2>
+    <p>See how LocalBridge has helped communities resolve everyday issues</p>
+    <div class="stories">
+      <div class="story-card">
+        <img src="uploads/pathholefixed.jpg" alt="Pothole Fixed">
+        <h3>Pothole Fixed in 48 Hours</h3>
+        <p>After being reported by multiple residents and receiving 50+ upvotes, the city filled a dangerous pothole within two days.</p>
+        <span class="story-location">Nakane Road, Dhule</span>
+      </div>
+      <div class="story-card">
+        <img src="uploads/streetlightimprove.jpeg" alt="Improved Street Lighting">
+        <h3>Improved Street Lighting</h3>
+        <p>Community members highlighted safety concerns in a poorly lit area, resulting in new streetlights being installed.</p>
+        <span class="story-location">Shindkheda, Maharashtra</span>
+      </div>
+      <div class="story-card">
+        <img src="uploads/parkclean.jpg" alt="Park Cleanup Initiative">
+        <h3>Park Cleanup Initiative</h3>
+        <p>Reports of littering led to a community cleanup event supported by local authorities and businesses.</p>
+        <span class="story-location">Central Park, Shirpur</span>
+      </div>
+    </div>
+    <button class="btn-outline wide">View All Success Stories</button>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Ready to improve your community?</h2>
+    <p>Join LocalBridge today and start making a difference in your neighborhood.</p>
+    <div class="cta-actions">
+      <button class="btn-primary">Sign Up Now</button>
+      <button class="btn-outline">Browse Issues</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-col">
+      <div class="footer-logo">
+       <img src="logo.png" alt="LocalBridge Logo">
+        <span class="logo-text">LocalBridge</span>
+      </div>
+      <p>Connecting communities to solve local issues. Report, track, and resolve civic problems together.</p>
+    </div>
+    <div class="footer-col">
+      <h4>RESOURCES</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>LEGAL</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('logout') === 'success') {
+      alert('You have been signed out successfully.');
+      // Clean the URL by removing query parameters without reloading
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  });
+</script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

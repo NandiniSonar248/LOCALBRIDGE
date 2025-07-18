@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About LocalBridge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body { background: #f7f9fb; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #222; }
+    /* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0.7rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+h1 {
+  text-align: center;
+}
+
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #2166e6;
+}
+
+.logo-icon {
+  font-size: 1.6rem;
+  margin-right: 0.5rem;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.navbar-menu a.active,
+.navbar-menu a:hover {
+  color: #2166e6;
+  border-bottom: 2px solid #2166e6;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 0.7rem;
+}
+.btn-white-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0.5rem 1.3rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin: 0 0.5rem;
+}
+
+.btn-white-outline:hover,
+.btn-white-outline:focus {
+  background: #fff;
+  color: #2563eb; /* Use your primary blue */
+  border-color: #fff;
+}
+
+
+.btn-primary, .btn-outline {
+  padding: 0.5rem 1.1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.btn-primary {
+  background: #2166e6;
+  color: #fff;
+  border: 1px solid #2166e6;
+}
+
+.btn-primary:hover {
+  background: #174bb3;
+  border-color: #174bb3;
+}
+
+.btn-outline {
+  background: #fff;
+  color: #2166e6;
+  border: 1px solid #2166e6;
+}
+
+.btn-outline:hover {
+  background: #e6f0ff;
+}
+
+.btn-outline.wide {
+  width: 220px;
+  margin: 2rem auto 0 auto;
+  display: block;
+}
+
+    /* Main Content */
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.5em 1em 1em 1em;
+    }
+    h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      margin-bottom: 0.4em;
+      margin-top: 0.5em;
+      text-align: center;
+    }
+    /* Mission Card */
+    .mission-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 8px #e7eaf3;
+      padding: 2.2em 2em;
+      margin-bottom: 2em;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mission-card h2 {
+      margin-top: 0;
+      font-size: 1.45em;
+      font-weight: 600;
+      margin-bottom: 0.7em;
+    }
+    .mission-card p {
+      margin: 0.5em 0;
+      font-size: 1.08em;
+      color: #222;
+      line-height: 1.7;
+    }
+    /* For Communities / Authorities */
+    .for-row {
+      display: flex;
+      gap: 2em;
+      margin-bottom: 2em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .for-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 8px #e7eaf3;
+      padding: 2em 1.5em 1.5em 1.5em;
+      flex: 1 1 320px;
+      min-width: 280px;
+      max-width: 420px;
+      margin-bottom: 1.5em;
+    }
+    .for-icon {
+      font-size: 1.7em;
+      background: #eff6ff;
+      color: #2563eb;
+      border-radius: 50%;
+      padding: 0.35em 0.6em;
+      display: inline-block;
+      margin-bottom: 0.5em;
+    }
+    .for-card h3 {
+      margin: 0.2em 0 0.6em 0;
+      font-size: 1.13em;
+      font-weight: 600;
+    }
+    .for-card p {
+      margin: 0.3em 0 0 0;
+      color: #222;
+      font-size: 1.01em;
+      line-height: 1.7;
+    }
+    /* Team */
+    .team-section {
+      margin-top: 2em;
+    }
+    .team-title {
+      font-size: 1.4em;
+      font-weight: 700;
+      margin-bottom: 1.2em;
+    }
+    .team-row {
+      display: flex;
+      gap: 2em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .team-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 8px #e7eaf3;
+      padding: 0 0 1.5em 0;
+      flex: 1 1 220px;
+      min-width: 220px;
+      max-width: 340px;
+      text-align: center;
+      margin-bottom: 1.5em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .team-img {
+      width: 100%;
+      max-width: 340px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+      background: #eee;
+      margin-bottom: 1em;
+      display: block;
+    }
+    .team-name {
+      font-weight: 600;
+      font-size: 1.07em;
+      margin-bottom: 0.1em;
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-top: 0.2em;
+    }
+    .team-role {
+      color: #2563eb;
+      font-size: 1em;
+      margin-bottom: 0.5em;
+      display: block;
+      text-decoration: none;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+    .team-role:hover {
+      text-decoration: underline;
+    }
+    .team-desc {
+      color: #444;
+      font-size: 0.99em;
+      margin-top: 0.5em;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+    /* Values */
+    .values-section {
+      background: #eaf3fe;
+      border-radius: 16px;
+      margin: 3em auto 2em auto;
+      padding: 2.5em 1em;
+      max-width: 1000px;
+      text-align: center;
+    }
+    .values-icon {
+      font-size: 2.3em;
+      color: #2563eb;
+      margin-bottom: 0.7em;
+      display: block;
+    }
+    .values-title {
+      font-size: 1.3em;
+      font-weight: 700;
+      margin-bottom: 1.3em;
+    }
+    .values-row {
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .value-col {
+      flex: 1;
+      min-width: 180px;
+      max-width: 320px;
+    }
+    .value-col-title {
+      font-weight: 600;
+      margin-bottom: 0.4em;
+      font-size: 1.1em;
+    }
+    /* Contact */
+    .contact-section {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 8px #e7eaf3;
+      max-width: 900px;
+      margin: 2.5em auto 2em auto;
+      padding: 2.5em 1em;
+      text-align: center;
+    }
+    .contact-icon {
+      font-size: 2.5em;
+      color: #2563eb;
+      margin-bottom: 0.6em;
+      display: block;
+    }
+    .contact-title {
+      font-size: 1.2em;
+      font-weight: 700;
+      margin-bottom: 0.7em;
+    }
+    .contact-btn {
+      background: #2563eb;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.7em 2em;
+      font-weight: 600;
+      border: none;
+      font-size: 1em;
+      margin-top: 1em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-btn:hover {
+      background: #1d4ed8;
+    }
+    /* Footer */
+    .footer {
+      background: #fff;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 3em;
+      padding: 2em 0 1em 0;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2em;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 0.5em;
+      display: flex;
+      align-items: center;
+    }
+    .footer-logo:before {
+      content: '';
+      display: inline-block;
+      background: url('data:image/svg+xml;utf8,<svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="22" height="22" rx="5" fill="%232563eb"/><rect x="5" y="5" width="12" height="12" rx="3" fill="white"/><rect x="8" y="8" width="6" height="6" rx="1.5" fill="%232563eb"/></svg>') no-repeat center center/contain;
+      width: 22px;
+      height: 22px;
+      margin-right: 0.4em;
+      vertical-align: middle;
+    }
+    .footer-col {
+      min-width: 180px;
+      margin-bottom: 1em;
+    }
+    .footer-col h4 {
+      margin-bottom: 0.7em;
+      font-size: 1em;
+      font-weight: 600;
+    }
+    .footer-col a {
+      display: block;
+      color: #222;
+      text-decoration: none;
+      margin-bottom: 0.3em;
+      font-size: 0.97em;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover {
+      text-decoration: underline;
+      color: #2563eb;
+    }
+    .footer-copy {
+      text-align: center;
+      color: #888;
+      font-size: 0.97em;
+      margin-top: 2em;
+    }
+    .footer-icons {
+      margin-top: 0.7em;
+    }
+    .footer-icons span {
+      font-size: 1.2em;
+      margin-right: 0.3em;
+    }
+    @media (max-width: 900px) {
+      .for-row, .team-row, .values-row, .footer-container { flex-direction: column; gap: 1.5em; }
+      .about-container { padding: 1em; }
+    }
+  </style>
+</head>
+<body>
+<!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-left">
+     <img src="logo.png" alt="LocalBridge Logo">
+      <span class="logo-text">LocalBridge</span>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="issues.html">Issues</a></li>
+      <li><a href="reportIssue.php">Report Issue</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="navbar-right">
+      <a href="signin.php"><button class="btn-outline">Sign in</button></a>
+       <a href="signup.php"><button class="btn-primary">Sign up</button></a>
+    </div>
+  </nav>
+
+  <!-- Main About Content -->
+  <div class="about-container">
+    <h1>About LocalBridge</h1>
+    <!-- Mission -->
+    <div class="mission-card">
+      <h2>Our Mission</h2>
+      <p>
+        LocalBridge was created with a simple but powerful mission: to connect communities with local authorities and empower citizens to improve their neighborhoods.
+      </p>
+      <p>
+        We believe that by making it easy to report and track civic issues, we can create more responsive local governments and more engaged communities. Our platform serves as a bridge between residents and authorities, facilitating communication and cooperation to solve everyday problems.
+      </p>
+    </div>
+    <!-- For Communities / Authorities -->
+    <div class="for-row">
+      <div class="for-card">
+        <div class="for-icon"><img src="https://img.icons8.com/fluency-systems-filled/28/2563eb/user-group-man-man.png" alt="For Communities" style="width:28px;height:28px;vertical-align:middle;"></div>
+        <h3>For Communities</h3>
+        <p>
+          LocalBridge provides a platform for residents to voice concerns, highlight issues, and track their resolution. By upvoting issues that matter most, communities can democratically prioritize the problems that need urgent attention.
+        </p>
+      </div>
+      <div class="for-card">
+        <div class="for-icon"><img src="https://img.icons8.com/fluency-systems-filled/28/2563eb/synchronize.png" alt="For Authorities" style="width:28px;height:28px;vertical-align:middle;"></div>
+        <h3>For Authorities</h3>
+        <p>
+          We help local authorities better understand community needs, prioritize resources efficiently, and communicate progress transparently. Our admin dashboard provides tools to manage issues, update statuses, and engage directly with residents.
+        </p>
+      </div>
+    </div>
+    <!-- Team -->
+    <div class="team-section">
+      <div class="team-title">Our Team</div>
+      <div class="team-row">
+        <div class="team-card">
+          <img class="team-img" src="kanishka.jpg" alt="kanishka">
+          <div class="team-name">Kanishka Wani</div>
+          <a class="team-role" href="https://www.linkedin.com/in/kanishka-wani-2520a5288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">CEO</a>
+          <div class="team-desc">Student at SVKM Institute of Technology, Dhule.</div>
+        </div>
+        <div class="team-card">
+          <img class="team-img" src="nandini.jpg" alt="Nandini">
+          <div class="team-name">Nandini Sonar</div>
+          <a class="team-role" href="https://www.linkedin.com/in/nandini-sonar-801849304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">CTO</a>
+          <div class="team-desc">Student at SVKM Institute of Technology, Dhule.</div>
+        </div>
+        <div class="team-card">
+          <img class="team-img" src="harshu.jpg" alt="Harshala">
+          <div class="team-name">Harshala Suryawanshi</div>
+          <a class="team-role" href="https://www.linkedin.com/in/harshala-suryawanshi-1672bb288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">FOUNDER</a>
+          <div class="team-desc">Student at SVKM Institute of Technology, Dhule.</div>
+        </div>
+      </div>
+    </div>
+    <!-- Values -->
+    <div class="values-section">
+      <span class="values-icon">💙</span>
+      <div class="values-title">Our Values</div>
+      <div class="values-row">
+        <div class="value-col">
+          <div class="value-col-title">Transparency</div>
+          <div>We believe in open communication and visible progress tracking.</div>
+        </div>
+        <div class="value-col">
+          <div class="value-col-title">Community</div>
+          <div>We prioritize building connections between neighbors and officials.</div>
+        </div>
+        <div class="value-col">
+          <div class="value-col-title">Impact</div>
+          <div>We measure success by real-world improvements in communities.</div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact -->
+    <div class="contact-section">
+      <span class="contact-icon"><img src="https://img.icons8.com/fluency-systems-filled/48/2563eb/new-post.png" alt="Mail" style="width:48px;height:48px;vertical-align:middle;"></span>
+      <div class="contact-title">Get in Touch</div>
+      <div>Have questions about LocalBridge or want to partner with us?</div>
+      <button class="contact-btn" onclick="window.location.href='#'">Contact Us</button>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="footer-logo">LocalBridge</div>
+        <div>Connecting communities to solve local issues. Report, track, and resolve civic problems together.</div>
+        <div class="footer-icons">
+          <span><img src="https://img.icons8.com/fluency-systems-filled/20/2563eb/city.png" alt="City"></span>
+          <span><img src="https://img.icons8.com/fluency-systems-filled/20/2563eb/new-post.png" alt="Mail"></span>
+          <span><img src="https://img.icons8.com/fluency-systems-filled/20/2563eb/marker.png" alt="Location"></span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>RESOURCES</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contact Us</a>
+        <a href="#">How It Works</a>
+      </div>
+      <div class="footer-col">
+        <h4>LEGAL</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2025 LocalBridge. All rights reserved.</div>
+  </footer>
+</body>
+</html>
